@@ -1,0 +1,10 @@
+{
+  "name": "playwright-teamcity-example",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "playwright": "^1.32.0"
+  }
+}
