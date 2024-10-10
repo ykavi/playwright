@@ -1,10 +1,13 @@
 {
-  "name": "playwright-teamcity-example",
+  "name": "playwright",
   "version": "1.0.0",
-  "scripts": {
-    "test": "playwright test"
+  "main": "index.js",
+  "repository": "https://github.com/ykavi/playwright.git",
+  "author": "Emre Kavi <emre.kavi@nesine.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^22.7.5"
   },
-  "dependencies": {
-    "playwright": "^1.32.0"
-  }
+  "scripts": {}
 }
