@@ -9,5 +9,5 @@ test('basic test', async ({ page }) => {
 
     // Sayfa başlığının doğru olup olmadığını test et
     const title = await page.title();
-    expect(title).toBe('Example Domain');
+    expect(title).toBe('Example Domain!!!');
 });
