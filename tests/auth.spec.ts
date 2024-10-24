@@ -9,6 +9,9 @@ test.describe('Login', () => {
   test('User name check', async ({ page }) => {
     await page.goto('https://nesine.com/');
     await page.waitForTimeout(2000);
+
+    await page.getByRole('button', { name: 'Kabul Et' }).click();
+    await page.getByRole('button', { name: '' }).click();
     await page.locator('[data-test-id="header-username-input"]').click();
     await page.locator('[data-test-id="header-username-input"]').fill('12105134030');
     await page.locator('[data-test-id="header-password-input"]').click();
