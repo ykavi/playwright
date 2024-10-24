@@ -13,11 +13,12 @@ test.describe('Login', () => {
     await page.getByRole('button', { name: 'Kabul Et' }).click();
     await page.getByRole('button', { name: '' }).click();
     await page.locator('[data-test-id="header-username-input"]').click();
-    await page.locator('[data-test-id="header-username-input"]').fill('12105134030');
+    await page.locator('[data-test-id="header-username-input"]').fill(process.env.USER_NAME || "");
     await page.locator('[data-test-id="header-password-input"]').click();
-    await page.locator('[data-test-id="header-password-input"]').fill('qaz123');
+    await page.locator('[data-test-id="header-password-input"]').fill(process.env.PASSWORD || "");
     await page.locator('[data-test-id="header-login-btn"]').click();
 
+    await page.waitForTimeout(2000);
 
     const isBetMinuteEnabled = await page.evaluate(() => {
       return window.BetMinuteEnabled;

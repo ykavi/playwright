@@ -8,9 +8,9 @@ export const getUpdatedCookiesAfterLogin = async (): Promise<Cookie[]> => {
     await loginPage.click('a.btn-close[title="kapat"]');
     await loginPage.getByRole('button', { name: 'Kabul Et' }).click();
     await loginPage.getByRole('textbox', { name: 'Üye No, TC No, YKN, Kullanıc' }).click();
-    await loginPage.getByRole('textbox', { name: 'Üye No, TC No, YKN, Kullanıc' }).fill('12105134030');
+    await loginPage.getByRole('textbox', { name: 'Üye No, TC No, YKN, Kullanıc' }).fill(process.env.USER_NAME || "");
     await loginPage.locator('#realpassLP').click();
-    await loginPage.locator('#realpassLP').fill('qaz123');
+    await loginPage.locator('#realpassLP').fill(process.env.PASSWORD || '');
     await loginPage.getByRole('link', { name: 'GİRİŞ' }).click();
     await loginPage.reload();
     await loginPage.close();
